@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide show</title>
+    <script>
+        const x = document.getElementById('slide').value;
+      function myFun (){ 
+          alert(x);
+        }
+    </script>
+</head>
+<style>
+    body{
+        background: rgba(146, 97, 7, 0.472);
+    }
+    .container {
+        background-color: rgba(104, 81, 63, 0.397);
+        border-radius: 4px;
+        margin: 0 auto;
+        margin-top: 4%;
+        width: 90%;
+        height: 366px;
+    }
+
+    .img {
+        z-index: 0;
+        width: 24%;
+        box-sizing: border-box;
+        height: 350px;
+        border-top: 21px;
+        float: left;
+        margin: 5px;
+        border-radius: 3px;
+        transition: 0.9s;
+    }
+    .gallery{
+        width: 50%;
+        color: #6d4324;
+        margin-left: 21%;
+        border: 1px transparent;
+        padding: 4px;
+        /* box-shadow: 0px 0px 8px 0px; */
+        margin-top: 25px;
+        font-size: 39px;
+
+    }
+</style>
+
+<body>
+    <marquee behavior="" direction="right" class="gallery">Photo gallery</marquee>
+    <div class="container">
+        <img src="img/1.jpg" id='slide' class="img" alt="" onmouseover="src='img/5.jpg'" onmouseout="src='img/1.jpg'" onclick="src='img/9.jpg'">
+        <img src="img/13.jpg" class="img" onmouseover="src='img/6.jpg'" onclick="src='img/10.jpg'" onmouseout="src='img/13.jpg'">
+        <img src="img/3.jpg" class="img" alt="" onmouseover="src='img/7.jpg'" onclick="src='img/11.jpg'" onmouseout="src='img/3.jpg'">
+        <img src="img/4.jfif" class="img" alt="" onmouseover="src='img/8.jpg'"onclick="src='img/12.jpg'"  onmouseout="src='img/4.jfif'">
+
+    </div>
+</body>
+
+</html>
